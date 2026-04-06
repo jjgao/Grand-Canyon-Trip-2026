@@ -1,113 +1,174 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Grand Canyon Trip 2026 — Quick Reference</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Quick Reference — Grand Canyon Trip 2026</title>
   <style>
-    body { font-family: Inter, system-ui, sans-serif; background:#fffaf3; color:#1f2937; margin:0; }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 56px; }
-    h1 { margin: 0 0 8px; }
-    .sub { color:#6b7280; margin-bottom: 18px; }
-    .top a { color:#c2410c; margin-right:14px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-top:18px; }
-    .card { background:#fff; border:1px solid #eadfce; border-radius:16px; padding:16px; }
-    h2 { margin-top:0; font-size:1.05rem; }
-    ul { padding-left: 18px; }
-    .small { color:#6b7280; }
-    a { color:#c2410c; }
+    :root{--bg:#fffaf3;--card:#fff;--ink:#1f2937;--muted:#6b7280;--accent:#c2410c;--accent2:#92400e;--line:#eadfce}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+    nav{background:var(--accent);display:flex;flex-wrap:wrap;gap:2px;padding:8px 16px}
+    nav a{color:#fff;text-decoration:none;padding:6px 12px;border-radius:8px;font-size:.9rem;font-weight:600}
+    nav a:hover{background:rgba(255,255,255,.15)}
+    .wrap{max-width:900px;margin:0 auto;padding:28px 16px 64px}
+    h1{margin:0 0 6px;font-size:1.8rem}
+    .sub{color:var(--muted);margin-bottom:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:20px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+    .card h2{margin:0 0 10px;font-size:1rem;color:var(--accent2)}
+    ul{padding-left:18px;margin:6px 0}
+    li{margin-bottom:4px}
+    .rule{background:#fff1e6;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:16px;font-size:.93rem}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .conf{font-family:monospace;background:#f3f4f6;border-radius:5px;padding:2px 7px;font-size:.9rem}
+    .section-title{font-size:1.15rem;font-weight:700;margin:24px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+    footer{color:var(--muted);font-size:.88rem;margin-top:32px;text-align:center}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Quick Reference</h1>
-    <div class="sub">The stuff you actually need when tired, in the car, or checking in somewhere.</div>
-    <div class="top">
-      <a href="./index.html">Home</a>
-      <a href="./grand-canyon-trip-2026-itinerary.md">Detailed itinerary</a>
-      <a href="./grand-canyon-trip-2026-execution.md">Execution version</a>
-      <a href="./grand-canyon-trip-2026-checklist.md">Checklist</a>
+<nav>
+  <a href="./index.html">🏠 Home</a>
+  <a href="./itinerary.html">📅 Itinerary</a>
+  <a href="./quick-reference.html">📋 Quick Ref</a>
+  <a href="./food.html">🍜 Food</a>
+  <a href="./checklist.html">✅ Checklist</a>
+  <a href="./resources.html">🗺️ Maps</a>
+</nav>
+<div class="wrap">
+  <h1>📋 Quick Reference</h1>
+  <div class="sub">Everything you need when tired, checking in, or in the car.</div>
+
+  <div class="rule">⏰ <strong>Saturday departure:</strong> Leave hotel by 7:15 AM · Return Budget car at LAS · UA2004 departs 10:15 AM</div>
+
+  <div class="section-title">✈️ Flights</div>
+  <div class="grid">
+    <div class="card">
+      <h2>Outbound — Apr 5</h2>
+      <ul>
+        <li>Flight: <strong>UA743</strong></li>
+        <li>EWR → <a href="https://www.google.com/maps/search/?api=1&query=Harry+Reid+International+Airport+Las+Vegas+NV">LAS</a></li>
+        <li>Departs: <strong>5:30 PM</strong></li>
+        <li>Arrives: <strong>8:24 PM</strong></li>
+        <li>Conf: <span class="conf">C77YK2</span></li>
+      </ul>
     </div>
-
-    <div class="grid">
-      <section class="card">
-        <h2>Flights</h2>
-        <ul>
-          <li><strong>UA743</strong> — EWR → LAS</li>
-          <li>Departs: <strong>5:30 PM</strong></li>
-          <li>Arrives: <strong>8:24 PM</strong></li>
-          <li>Confirmation: <strong>C77YK2</strong></li>
-          <li><strong>UA2004</strong> — LAS → EWR</li>
-          <li>Departs: <strong>10:15 AM</strong></li>
-          <li>Confirmations: <strong>L3XXY2</strong> / <strong>L46CRN</strong></li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>Car Rental</h2>
-        <ul>
-          <li><strong>Budget SUV</strong></li>
-          <li>Pickup: LAS, <strong>Apr 5 at 9:00 PM</strong></li>
-          <li>Confirmation: <strong>42869600US4</strong></li>
-        </ul>
-        <p class="small">Still worth confirming the return date if not already adjusted.</p>
-      </section>
-
-      <section class="card">
-        <h2>Antelope Canyon</h2>
-        <ul>
-          <li><strong>Ken’s Tours</strong></li>
-          <li>Check-in: <strong>8:15 AM</strong> on Wed Apr 8</li>
-          <li>Tour: <strong>9:00 AM</strong></li>
-          <li>Deluxe Lower Antelope Canyon tour</li>
-          <li>Includes some food</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>Hotels</h2>
-        <ul>
-          <li>Apr 5 — SpringHill Suites Las Vegas Airport · <strong>81079445</strong></li>
-          <li>Apr 6 — Zion Park Motel · <strong>228501</strong></li>
-          <li>Apr 7 — Sleep Inn & Suites Page · <strong>72072767954149</strong></li>
-          <li>Apr 8 — Cameron Trading Post · <strong>BE-301435</strong></li>
-          <li>Apr 9 — Grand Canyon Plaza Hotel · <strong>72072552834312</strong></li>
-          <li>Apr 10 — Rio Hotel & Casino · <strong>UG6B7K</strong></li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>Best Key Rules</h2>
-        <ul>
-          <li>Monday: grocery stop + Riverside Walk = success</li>
-          <li>Tuesday: Page is best refill town</li>
-          <li>Wednesday: keep it light after Antelope Canyon</li>
-          <li>Thursday: Mather first, Yavapai for sunset</li>
-          <li>Friday: choose one morning extra, not several</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>Best Food Bets</h2>
-        <ul>
-          <li>Springdale: Thai Sapa</li>
-          <li>Page: Thai Chili 2 Go</li>
-          <li>Cameron: Trading Post restaurant</li>
-          <li>Tusayan: We Cook Pizza & Pasta</li>
-          <li>Vegas: Peinto Thai Kitchen / Lotus of Siam</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>Maps / Downloads</h2>
-        <ul>
-          <li><a href="./grand-canyon-trip-2026-map-locations.kml">KML map file</a></li>
-          <li><a href="./grand-canyon-trip-2026-map-locations.csv">CSV map file</a></li>
-          <li><a href="./grand-canyon-trip-2026-itinerary.md">Detailed itinerary</a></li>
-          <li><a href="./grand-canyon-trip-2026-execution.md">Execution version</a></li>
-        </ul>
-      </section>
+    <div class="card">
+      <h2>Return — Apr 11</h2>
+      <ul>
+        <li>Flight: <strong>UA2004</strong></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Harry+Reid+International+Airport+Las+Vegas+NV">LAS</a> → EWR</li>
+        <li>Departs: <strong>10:15 AM</strong></li>
+        <li>Conf 1: <span class="conf">L3XXY2</span></li>
+        <li>Conf 2: <span class="conf">L46CRN</span></li>
+        <li>⏰ Be at airport by 8:00 AM</li>
+      </ul>
     </div>
   </div>
+
+  <div class="section-title">🚗 Car Rental</div>
+  <div class="grid">
+    <div class="card">
+      <h2>Budget SUV</h2>
+      <ul>
+        <li>Pickup: <a href="https://www.google.com/maps/search/?api=1&query=Harry+Reid+International+Airport+Las+Vegas+NV">LAS</a> · Apr 5 at 9:00 PM</li>
+        <li>Return: LAS · Apr 11 (before 10:15 AM flight)</li>
+        <li>Conf: <span class="conf">42869600US4</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-title">🏨 Hotels</div>
+  <div class="grid">
+    <div class="card">
+      <h2>Apr 5 — Las Vegas</h2>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=6590+S+Decatur+Blvd+Las+Vegas+NV">SpringHill Suites Las Vegas Airport</a></li>
+        <li>Conf: <span class="conf">81079445</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Apr 6 — Springdale / Zion</h2>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=865+Zion+Park+Blvd+Springdale+UT">Zion Park Motel</a></li>
+        <li>Conf: <span class="conf">228501</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Apr 7 — Page, AZ</h2>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=673+Scenic+View+Rd+Page+AZ">Sleep Inn & Suites Page at Lake Powell</a></li>
+        <li>Conf: <span class="conf">72072767954149</span></li>
+        <li>Indoor pool · free breakfast</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Apr 8 — Cameron, AZ</h2>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Cameron+Trading+Post+Hotel+Cameron+AZ">Cameron Trading Post Hotel</a></li>
+        <li>Conf: <span class="conf">BE-301435</span></li>
+        <li>⚠️ Late arrivals: check in at Shell Gas Station</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Apr 9 — Grand Canyon</h2>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=406+Canyon+Plaza+Ln+Grand+Canyon+Village+AZ">Grand Canyon Plaza Hotel</a></li>
+        <li>Conf: <span class="conf">72072552834312</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Apr 10 — Las Vegas</h2>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Rio+Hotel+Casino+Las+Vegas+NV">Rio Hotel & Casino</a></li>
+        <li>Conf: <span class="conf">UG6B7K</span></li>
+        <li>Booked via vio.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-title">🎯 Key Activities</div>
+  <div class="grid">
+    <div class="card">
+      <h2>Lower Antelope Canyon — Wed Apr 8</h2>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Ken%27s+Tours+Lower+Antelope+Canyon+Page+AZ">Ken's Tours</a></li>
+        <li>Check-in: <strong>8:15 AM</strong></li>
+        <li>Tour start: <strong>9:00 AM</strong></li>
+        <li>Deluxe tour — includes food</li>
+        <li>Small bag only · no tripods · bring camera</li>
+        <li>2 of 4 need vegetarian menu — request in advance</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Omega Mart — Fri Apr 10</h2>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Omega+Mart+AREA15+3215+S+Rancho+Dr+Las+Vegas+NV">AREA15 · 3215 S Rancho Dr</a></li>
+        <li>Buy tickets online: <a href="https://meowwolf.com">meowwolf.com</a></li>
+        <li>Timed entry — do not count on gate</li>
+        <li>Plan 2–3 hours inside</li>
+        <li>Only if arrival energy is good</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-title">⚡ Key Rules</div>
+  <div class="grid">
+    <div class="card">
+      <h2>Trip rules at a glance</h2>
+      <ul>
+        <li>🛒 Monday: grocery stop + Riverside Walk = success</li>
+        <li>📍 Tuesday: Page = best mid-trip refill town</li>
+        <li>😴 Wednesday: keep it light after Antelope Canyon</li>
+        <li>🏔️ Thursday: Mather first, Yavapai for sunset</li>
+        <li>☀️ Friday: choose one morning extra, not several</li>
+        <li>🧳 Saturday: leave hotel by 7:15 AM · no heroics</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>🏜️ Grand Canyon Trip 2026 · Have an amazing trip!</footer>
+</div>
 </body>
 </html>

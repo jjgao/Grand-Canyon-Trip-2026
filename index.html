@@ -1,212 +1,246 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Grand Canyon Trip 2026</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>🏜️ Grand Canyon Trip 2026</title>
   <style>
-    :root {
-      --bg: #fffaf3;
-      --card: #ffffff;
-      --ink: #1f2937;
-      --muted: #6b7280;
-      --accent: #c2410c;
-      --accent-2: #92400e;
-      --line: #eadfce;
-      --chip: #fff1e6;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.5;
-    }
-    .wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 16px 64px;
-    }
-    header {
-      margin-bottom: 24px;
-    }
-    h1 { margin: 0 0 8px; font-size: 2rem; }
-    .sub { color: var(--muted); margin-bottom: 16px; }
-    .links {
-      display: flex; flex-wrap: wrap; gap: 10px;
-      margin-bottom: 20px;
-    }
-    .btn {
-      text-decoration: none; color: white; background: var(--accent);
-      padding: 10px 14px; border-radius: 999px; font-weight: 600;
-    }
-    .btn.secondary { background: var(--accent-2); }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 1px 2px rgba(0,0,0,.04);
-    }
-    h2 { margin-top: 0; font-size: 1.15rem; }
-    h3 { margin-bottom: 8px; font-size: 1rem; }
-    .meta {
-      color: var(--muted);
-      font-size: .95rem;
-      margin-bottom: 10px;
-    }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
-    .chip {
-      background: var(--chip);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: .84rem;
-      color: var(--accent-2);
-    }
-    ul { padding-left: 18px; margin: 8px 0; }
-    details {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 12px 14px;
-      margin: 12px 0;
-    }
-    summary { cursor: pointer; font-weight: 700; }
-    a { color: var(--accent); }
-    .small { color: var(--muted); font-size: .92rem; }
-    .footer { margin-top: 28px; color: var(--muted); font-size: .92rem; }
+    :root{--bg:#fffaf3;--card:#fff;--ink:#1f2937;--muted:#6b7280;--accent:#c2410c;--accent2:#92400e;--line:#eadfce;--chip:#fff1e6}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+    nav{background:var(--accent);display:flex;flex-wrap:wrap;gap:2px;padding:8px 16px}
+    nav a{color:#fff;text-decoration:none;padding:6px 12px;border-radius:8px;font-size:.9rem;font-weight:600}
+    nav a:hover{background:rgba(255,255,255,.15)}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 16px 64px}
+    .hero{background:linear-gradient(135deg,#7c2d12,#c2410c,#ea580c);color:#fff;border-radius:20px;padding:36px 28px;margin-bottom:28px}
+    .hero h1{margin:0 0 6px;font-size:2.2rem}
+    .hero p{margin:0;opacity:.85;font-size:1.05rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:28px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+    .card h2{margin:0 0 10px;font-size:1.05rem;color:var(--accent2)}
+    ul{padding-left:18px;margin:6px 0}
+    li{margin-bottom:4px}
+    .chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+    .chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:.82rem;color:var(--accent2)}
+    details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:12px}
+    summary{cursor:pointer;font-weight:700;font-size:1rem;list-style:none}
+    summary::before{content:"▶ ";font-size:.8rem;color:var(--accent)}
+    details[open] summary::before{content:"▼ "}
+    .day-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .sub-card{background:#fdf8f3;border:1px solid var(--line);border-radius:10px;padding:12px}
+    .sub-card h3{margin:0 0 6px;font-size:.92rem;color:var(--accent2)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .badge{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;padding:2px 9px;font-size:.78rem;font-weight:700;margin-right:4px}
+    .badge.green{background:#16a34a}
+    .badge.blue{background:#1d4ed8}
+    .badge.orange{background:#ea580c}
+    .rule{background:#fff1e6;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;padding:10px 14px;margin:10px 0;font-size:.94rem}
+    footer{color:var(--muted);font-size:.88rem;margin-top:32px;text-align:center}
+    @media(max-width:600px){.hero h1{font-size:1.6rem}}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>🏜️ Grand Canyon Trip 2026</h1>
-      <div class="sub">A lightweight trip page for April 5–11, 2026.</div>
-      <div class="links">
-        <a class="btn" href="./grand-canyon-trip-2026-itinerary.md">Detailed itinerary</a>
-        <a class="btn secondary" href="./grand-canyon-trip-2026-execution.md">Execution version</a>
-        <a class="btn secondary" href="./grand-canyon-trip-2026-checklist.md">Checklist</a>
-        <a class="btn secondary" href="./quick-reference.html">Quick reference</a>
-        <a class="btn secondary" href="./resources.html">Maps & resources</a>
-        <a class="btn secondary" href="./grand-canyon-trip-2026-map-locations.kml">KML map</a>
-        <a class="btn secondary" href="./grand-canyon-trip-2026-map-locations.csv">CSV map</a>
-      </div>
-    </header>
-
-    <section class="grid">
-      <article class="card">
-        <h2>Trip at a glance</h2>
-        <ul>
-          <li>Apr 5: Newark → Las Vegas</li>
-          <li>Apr 6: Zion</li>
-          <li>Apr 7: Page + Horseshoe Bend</li>
-          <li>Apr 8: Lower Antelope Canyon + Cameron</li>
-          <li>Apr 9: Grand Canyon South Rim</li>
-          <li>Apr 10: Grand Canyon morning + Las Vegas</li>
-          <li>Apr 11: Fly home</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>Locked bookings</h2>
-        <ul>
-          <li>UA743 EWR → LAS</li>
-          <li>Budget SUV — 42869600US4</li>
-          <li>Lower Antelope Canyon Deluxe Tour — Ken’s Tours</li>
-          <li>Rio Hotel & Casino — UG6B7K</li>
-          <li>Return flight UA2004 — L3XXY2 / L46CRN</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>Best strategic notes</h2>
-        <ul>
-          <li>Monday morning Vegas grocery stop</li>
-          <li>Tuesday Page is best mid-trip refill town</li>
-          <li>Thursday: Mather first, Yavapai for sunset</li>
-          <li>Friday: choose one morning extra, not several</li>
-          <li>Omega Mart is optional depending on energy</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>Best food bets</h2>
-        <ul>
-          <li>Springdale: Thai Sapa</li>
-          <li>Page: Thai Chili 2 Go</li>
-          <li>Cameron: Trading Post restaurant</li>
-          <li>Tusayan: We Cook Pizza &amp; Pasta</li>
-          <li>Vegas: Peinto Thai Kitchen / Lotus of Siam</li>
-        </ul>
-      </article>
-    </section>
-
-    <details open>
-      <summary>Monday — Zion</summary>
-      <div class="chips">
-        <span class="chip">Sunrise 7:11 AM</span>
-        <span class="chip">Sunset 7:59 PM</span>
-        <span class="chip">~70°F / 43°F</span>
-      </div>
-      <p><strong>Default flow:</strong> Grocery stop in Vegas → drive to Springdale → Riverside Walk first → scenic shuttle stops → early dinner → Pa’rus only if energy remains.</p>
-      <p><strong>Food:</strong> Thai Sapa · Spotted Dog Cafe · Bit & Spur</p>
-    </details>
-
-    <details>
-      <summary>Tuesday — Page</summary>
-      <div class="chips">
-        <span class="chip">Sunrise 6:03 AM</span>
-        <span class="chip">Sunset 6:53 PM</span>
-        <span class="chip">~72°F / ~40°F</span>
-      </div>
-      <p><strong>Priority order:</strong> Emerald Pools (light version) → Page → Horseshoe Bend → refill groceries → extra overlook only if time remains.</p>
-      <p><strong>Food:</strong> Thai Chili 2 Go · Chothika Thai Cuisine</p>
-    </details>
-
-    <details>
-      <summary>Wednesday — Antelope Canyon + Cameron</summary>
-      <div class="chips">
-        <span class="chip">Sunrise 6:02 AM</span>
-        <span class="chip">Sunset 6:53 PM</span>
-        <span class="chip">60s–70s°F</span>
-      </div>
-      <p><strong>Default flow:</strong> Ken’s Tours 8:15 AM → Deluxe tour 9:00 AM → light rest → drive to Cameron → easy evening.</p>
-      <p><strong>Optional only:</strong> Navajo Bridge / Marble Canyon.</p>
-    </details>
-
-    <details>
-      <summary>Thursday — Grand Canyon South Rim</summary>
-      <div class="chips">
-        <span class="chip">Sunrise 6:04 AM</span>
-        <span class="chip">Sunset 6:57 PM</span>
-        <span class="chip">60s°F / 40s°F</span>
-      </div>
-      <p><strong>Default flow:</strong> One approach stop max → Mather Point → hotel/reset → Bright Angel or Rim Trail → Yavapai sunset → stargazing if energy remains.</p>
-      <p><strong>Food:</strong> We Cook Pizza & Pasta · Plaza Bonita · El Tovar</p>
-    </details>
-
-    <details>
-      <summary>Friday — Grand Canyon Morning + Vegas</summary>
-      <div class="chips">
-        <span class="chip">Sunrise 6:14 AM</span>
-        <span class="chip">Sunset 7:10 PM</span>
-        <span class="chip">Vegas ~80s°F</span>
-      </div>
-      <p><strong>Choose one morning extra:</strong> sunrise <em>or</em> one easy leftover stop. Then drive to Vegas.</p>
-      <p><strong>Food:</strong> Peinto Thai Kitchen · Lotus of Siam</p>
-      <p><strong>Rule:</strong> Omega Mart only if arrival energy is still good.</p>
-    </details>
-
-    <div class="footer">
-      Source files live in this same folder. This page is a lightweight dashboard, not the source of truth.
-    </div>
+<nav>
+  <a href="./index.html">🏠 Home</a>
+  <a href="./itinerary.html">📅 Itinerary</a>
+  <a href="./quick-reference.html">📋 Quick Ref</a>
+  <a href="./food.html">🍜 Food</a>
+  <a href="./checklist.html">✅ Checklist</a>
+  <a href="./resources.html">🗺️ Maps</a>
+</nav>
+<div class="wrap">
+  <div class="hero">
+    <h1>🏜️ Grand Canyon Trip 2026</h1>
+    <p>April 5–11 · 2 adults + 1 girl (12) + 1 boy (16) · Newark → Las Vegas → Zion → Page → Cameron → Grand Canyon → Las Vegas</p>
   </div>
+
+  <div class="grid">
+    <article class="card">
+      <h2>📍 Route</h2>
+      <ul>
+        <li><span class="badge">Apr 5</span> Newark → <a href="https://www.google.com/maps/search/?api=1&query=Harry+Reid+International+Airport+Las+Vegas+NV">Las Vegas</a></li>
+        <li><span class="badge">Apr 6</span> <a href="https://www.google.com/maps/search/?api=1&query=Zion+National+Park+Springdale+UT">Zion NP</a></li>
+        <li><span class="badge">Apr 7</span> <a href="https://www.google.com/maps/search/?api=1&query=Page+AZ">Page, AZ</a></li>
+        <li><span class="badge">Apr 8</span> <a href="https://www.google.com/maps/search/?api=1&query=Lower+Antelope+Canyon+Page+AZ">Antelope Canyon</a> + <a href="https://www.google.com/maps/search/?api=1&query=Cameron+AZ">Cameron</a></li>
+        <li><span class="badge">Apr 9</span> <a href="https://www.google.com/maps/search/?api=1&query=Grand+Canyon+South+Rim+AZ">Grand Canyon South Rim</a></li>
+        <li><span class="badge">Apr 10</span> GC Morning → <a href="https://www.google.com/maps/search/?api=1&query=Las+Vegas+NV">Las Vegas</a></li>
+        <li><span class="badge">Apr 11</span> Fly home</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>✈️ Flights</h2>
+      <ul>
+        <li><strong>UA743</strong> EWR → LAS — departs 5:30 PM, arrives 8:24 PM · C77YK2</li>
+        <li><strong>UA2004</strong> LAS → EWR — departs 10:15 AM · L3XXY2 / L46CRN</li>
+      </ul>
+      <h2 style="margin-top:14px">🚗 Car Rental</h2>
+      <ul>
+        <li>Budget SUV · pickup 9:00 PM Apr 5 · <strong>42869600US4</strong></li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>🏨 Hotels</h2>
+      <ul>
+        <li>Apr 5 — <a href="https://www.google.com/maps/search/?api=1&query=6590+S+Decatur+Blvd+Las+Vegas+NV">SpringHill Suites LAS Airport</a> · 81079445</li>
+        <li>Apr 6 — <a href="https://www.google.com/maps/search/?api=1&query=865+Zion+Park+Blvd+Springdale+UT">Zion Park Motel</a> · 228501</li>
+        <li>Apr 7 — <a href="https://www.google.com/maps/search/?api=1&query=673+Scenic+View+Rd+Page+AZ">Sleep Inn Page</a> · 72072767954149</li>
+        <li>Apr 8 — <a href="https://www.google.com/maps/search/?api=1&query=Cameron+Trading+Post+Hotel+Cameron+AZ">Cameron Trading Post</a> · BE-301435</li>
+        <li>Apr 9 — <a href="https://www.google.com/maps/search/?api=1&query=406+Canyon+Plaza+Ln+Grand+Canyon+Village+AZ">Grand Canyon Plaza</a> · 72072552834312</li>
+        <li>Apr 10 — <a href="https://www.google.com/maps/search/?api=1&query=Rio+Hotel+Casino+Las+Vegas+NV">Rio Hotel & Casino</a> · UG6B7K</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>🎯 Key Activities</h2>
+      <ul>
+        <li><strong>Wed 8:15 AM</strong> — <a href="https://www.google.com/maps/search/?api=1&query=Ken%27s+Tours+Lower+Antelope+Canyon+Page+AZ">Ken's Tours check-in</a></li>
+        <li><strong>Wed 9:00 AM</strong> — Lower Antelope Canyon Deluxe Tour</li>
+        <li><strong>Thu</strong> — <a href="https://www.google.com/maps/search/?api=1&query=Mather+Point+Grand+Canyon+Village+AZ">Mather Point</a> + <a href="https://www.google.com/maps/search/?api=1&query=Bright+Angel+Trailhead+Grand+Canyon+Village+AZ">Bright Angel Trail</a></li>
+        <li><strong>Fri optional</strong> — <a href="https://www.google.com/maps/search/?api=1&query=Omega+Mart+AREA15+Las+Vegas+NV">Omega Mart / AREA15</a></li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>🌟 Best of the trip</h2>
+      <ul>
+        <li>🌅 Sunset: <a href="https://www.google.com/maps/search/?api=1&query=Yavapai+Point+Grand+Canyon+Village+AZ">Yavapai Point</a> (Thu)</li>
+        <li>🔭 Stargazing: Grand Canyon (Gold Tier Dark Sky Park)</li>
+        <li>📸 Horseshoe Bend at sunset (Tue)</li>
+        <li>🏜️ Lower Antelope Canyon (Wed)</li>
+        <li>🥾 Riverside Walk, Zion (Mon)</li>
+        <li>🍜 Mom's noodles: Lotus of Siam (Fri)</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>⚡ Key rules</h2>
+      <ul>
+        <li>Mon: grocery stop + Riverside Walk = success</li>
+        <li>Tue: Page = best mid-trip refill town</li>
+        <li>Wed: keep it light after the canyon tour</li>
+        <li>Thu: Mather first, Yavapai for sunset</li>
+        <li>Fri: one morning extra only</li>
+        <li>Sat: leave hotel by 7:15 AM, no heroics</li>
+      </ul>
+    </article>
+  </div>
+
+  <h2>Day-by-Day Summaries</h2>
+
+  <details open>
+    <summary>Sunday, April 5 — Arrival in Las Vegas</summary>
+    <div class="chips">
+      <span class="chip">🌅 Sunrise 6:21 AM</span>
+      <span class="chip">🌇 Sunset 7:06 PM</span>
+      <span class="chip">☀️ 87°F / 51°F · 31°C / 11°C</span>
+    </div>
+    <div class="day-grid">
+      <div class="sub-card"><h3>✈️ Flights</h3><p>UA743 departs EWR 5:30 PM → arrives LAS 8:24 PM</p></div>
+      <div class="sub-card"><h3>🚗 Car Rental</h3><p>Budget SUV pickup 9:00 PM at <a href="https://www.google.com/maps/search/?api=1&query=Harry+Reid+International+Airport+Las+Vegas+NV">Harry Reid Airport</a></p></div>
+      <div class="sub-card"><h3>🏨 Hotel</h3><p><a href="https://www.google.com/maps/search/?api=1&query=6590+S+Decatur+Blvd+Las+Vegas+NV">SpringHill Suites Las Vegas Airport</a> · Conf: 81079445</p></div>
+    </div>
+    <div class="rule">Keep this night simple. Land, get the car, sleep.</div>
+  </details>
+
+  <details>
+    <summary>Monday, April 6 — Zion National Park</summary>
+    <div class="chips">
+      <span class="chip">🌅 Sunrise 7:11 AM</span>
+      <span class="chip">🌇 Sunset 7:59 PM</span>
+      <span class="chip">🌥️ 70°F / 43°F · 21°C / 6°C</span>
+    </div>
+    <div class="day-grid">
+      <div class="sub-card"><h3>🛒 Grocery Stop (Vegas)</h3><p><a href="https://www.google.com/maps/search/?api=1&query=SF+Supermarket+4801+Spring+Mountain+Rd+Las+Vegas+NV">SF Supermarket</a> for Asian groceries or <a href="https://www.google.com/maps/search/?api=1&query=4505+W+Charleston+Blvd+Las+Vegas+NV">Walmart Supercenter</a> for general stock-up</p></div>
+      <div class="sub-card"><h3>🥾 Hike</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Riverside+Walk+Zion+National+Park+Springdale+UT">Riverside Walk</a> first, then scenic shuttle stops</p></div>
+      <div class="sub-card"><h3>🌅 Sunset (optional)</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Pa%27rus+Trail+Zion+National+Park+Springdale+UT">Pa'rus Trail</a> if energy remains</p></div>
+      <div class="sub-card"><h3>🏨 Hotel</h3><p><a href="https://www.google.com/maps/search/?api=1&query=865+Zion+Park+Blvd+Springdale+UT">Zion Park Motel</a> · Conf: 228501</p></div>
+    </div>
+    <div class="rule">Success = grocery stop + Riverside Walk. Pa'rus sunset is a bonus.</div>
+  </details>
+
+  <details>
+    <summary>Tuesday, April 7 — Zion Morning + Page</summary>
+    <div class="chips">
+      <span class="chip">🌅 Sunrise 6:03 AM</span>
+      <span class="chip">🌇 Sunset 6:53 PM</span>
+      <span class="chip">🌤️ 72°F / 40°F · 22°C / 4°C</span>
+    </div>
+    <div class="day-grid">
+      <div class="sub-card"><h3>🥾 Zion Morning</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Emerald+Pools+Trailhead+Zion+National+Park+Springdale+UT">Emerald Pools</a> — Lower is the default; Middle only if energy is good</p></div>
+      <div class="sub-card"><h3>🌊 Afternoon (Page)</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Wahweap+Overlook+Page+AZ">Lake Powell / Wahweap viewpoint</a> or <a href="https://www.google.com/maps/search/?api=1&query=Glen+Canyon+Dam+Overlook+Page+AZ">Glen Canyon Dam Overlook</a></p></div>
+      <div class="sub-card"><h3>🌅 Sunset</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Horseshoe+Bend+Overlook+Page+AZ">Horseshoe Bend</a></p></div>
+      <div class="sub-card"><h3>🏨 Hotel</h3><p><a href="https://www.google.com/maps/search/?api=1&query=673+Scenic+View+Rd+Page+AZ">Sleep Inn & Suites Page</a> · Conf: 72072767954149</p></div>
+    </div>
+    <div class="rule">If Emerald Pools runs long, skip the overlook and just do Horseshoe Bend. Page is the best mid-trip grocery refill town.</div>
+  </details>
+
+  <details>
+    <summary>Wednesday, April 8 — Antelope Canyon + Cameron</summary>
+    <div class="chips">
+      <span class="chip">🌅 Sunrise 6:02 AM</span>
+      <span class="chip">🌇 Sunset 6:53 PM</span>
+      <span class="chip">🌤️ 65°F / 40°F · 18°C / 4°C</span>
+    </div>
+    <div class="day-grid">
+      <div class="sub-card"><h3>⏰ Ken's Tours check-in: 8:15 AM</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Ken%27s+Tours+Lower+Antelope+Canyon+Page+AZ">Ken's Tours</a> — Tour starts 9:00 AM. Deluxe tour includes food.</p></div>
+      <div class="sub-card"><h3>🛑 Optional stop</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Navajo+Bridge+Marble+Canyon+AZ">Navajo Bridge / Marble Canyon</a> on the way to Cameron</p></div>
+      <div class="sub-card"><h3>🔭 Stargazing</h3><p>Cameron is in the Navajo Nation — exceptional dark skies, wide open horizon</p></div>
+      <div class="sub-card"><h3>🏨 Hotel</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Cameron+Trading+Post+Hotel+Cameron+AZ">Cameron Trading Post Hotel</a> · Conf: BE-301435 · Late arrival → check in at Shell station</p></div>
+    </div>
+    <div class="rule">Keep the day light and flexible. Save Desert View / Watchtower for Thursday on the way in.</div>
+  </details>
+
+  <details>
+    <summary>Thursday, April 9 — Grand Canyon South Rim</summary>
+    <div class="chips">
+      <span class="chip">🌅 Sunrise 6:04 AM</span>
+      <span class="chip">🌇 Sunset 6:57 PM</span>
+      <span class="chip">❄️ 60°F / 40°F · 16°C / 4°C</span>
+    </div>
+    <div class="day-grid">
+      <div class="sub-card"><h3>🛣️ Approach (pick one)</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Desert+View+Watchtower+Grand+Canyon+AZ">Desert View / Watchtower</a> · <a href="https://www.google.com/maps/search/?api=1&query=Grandview+Point+Grand+Canyon+AZ">Grandview Point</a> · <a href="https://www.google.com/maps/search/?api=1&query=Lipan+Point+Grand+Canyon+AZ">Lipan Point</a></p></div>
+      <div class="sub-card"><h3>📍 First main stop</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Mather+Point+Grand+Canyon+Village+AZ">Mather Point</a> — biggest first-time wow</p></div>
+      <div class="sub-card"><h3>🥾 Hike</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Bright+Angel+Trailhead+Grand+Canyon+Village+AZ">Bright Angel Trail</a> short out-and-back <em>or</em> <a href="https://www.google.com/maps/search/?api=1&query=Rim+Trail+Grand+Canyon+Village+AZ">Rim Trail</a></p></div>
+      <div class="sub-card"><h3>🌅 Preferred sunset</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Yavapai+Point+Grand+Canyon+Village+AZ">Yavapai Point</a> — calmer, better for sunset than Mather</p></div>
+      <div class="sub-card"><h3>🔭 Stargazing</h3><p>Grand Canyon is a Gold Tier Dark Sky Park · best window: after sunset until midnight</p></div>
+      <div class="sub-card"><h3>🏨 Hotel</h3><p><a href="https://www.google.com/maps/search/?api=1&query=406+Canyon+Plaza+Ln+Grand+Canyon+Village+AZ">Grand Canyon Plaza Hotel</a> · Conf: 72072552834312</p></div>
+    </div>
+    <div class="rule">Pick ONE approach stop. Mather first, Yavapai for sunset. One hike only.</div>
+  </details>
+
+  <details>
+    <summary>Friday, April 10 — Grand Canyon Morning + Las Vegas</summary>
+    <div class="chips">
+      <span class="chip">🌅 Sunrise 6:14 AM</span>
+      <span class="chip">🌇 Sunset 7:10 PM</span>
+      <span class="chip">☀️ Vegas 80s°F · 27–31°C</span>
+    </div>
+    <div class="day-grid">
+      <div class="sub-card"><h3>🌅 Morning (choose one)</h3><p>Optional sunrise at <a href="https://www.google.com/maps/search/?api=1&query=Mather+Point+Grand+Canyon+Village+AZ">Mather</a> / <a href="https://www.google.com/maps/search/?api=1&query=Yavapai+Point+Grand+Canyon+Village+AZ">Yavapai</a> <em>or</em> one easy leftover stop: <a href="https://www.google.com/maps/search/?api=1&query=Grand+Canyon+Visitor+Center+Grand+Canyon+Village+AZ">Visitor Center</a> / short <a href="https://www.google.com/maps/search/?api=1&query=Rim+Trail+Grand+Canyon+Village+AZ">Rim Trail</a></p></div>
+      <div class="sub-card"><h3>🚗 Drive</h3><p>Check out by 11:00 AM → Grand Canyon to Las Vegas (~4.5 hrs)</p></div>
+      <div class="sub-card"><h3>🎰 Optional</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Omega+Mart+AREA15+Las+Vegas+NV">Omega Mart / AREA15</a> if arrival energy is good</p></div>
+      <div class="sub-card"><h3>🏨 Hotel</h3><p><a href="https://www.google.com/maps/search/?api=1&query=Rio+Hotel+Casino+Las+Vegas+NV">Rio Hotel & Casino</a> · Conf: UG6B7K</p></div>
+    </div>
+    <div class="rule">Choose one morning extra, not several. If tired, skip Omega Mart and just have a good dinner.</div>
+  </details>
+
+  <details>
+    <summary>Saturday, April 11 — Departure</summary>
+    <div class="chips">
+      <span class="chip">🌅 Sunrise 6:13 AM</span>
+      <span class="chip">🌇 Sunset 7:11 PM</span>
+      <span class="chip">☀️ Vegas 80s°F · 27–31°C</span>
+    </div>
+    <div class="day-grid">
+      <div class="sub-card"><h3>⏰ Leave hotel by 7:15 AM</h3><p>Return Budget car at LAS · UA2004 departs 10:15 AM</p></div>
+    </div>
+    <div class="rule">Keep it boring. That's success.</div>
+  </details>
+
+  <footer>🏜️ Grand Canyon Trip 2026 · Have an amazing trip!</footer>
+</div>
 </body>
 </html>
